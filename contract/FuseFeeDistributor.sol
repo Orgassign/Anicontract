@@ -10,8 +10,6 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
 contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     using AddressUpgradeable for address;
     using SafeERC20Upgradeable for IERC20Upgradeable;
-
-  
     function initialize(uint256 _interestFeeRate) public initializer {
         require(_interestFeeRate <= 1e18, "Interest fee rate cannot be more than 100%.");
         __Ownable_init();

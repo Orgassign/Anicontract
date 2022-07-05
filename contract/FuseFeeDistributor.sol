@@ -6,7 +6,6 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
 
-
 contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     using AddressUpgradeable for address;
     using SafeERC20Upgradeable for IERC20Upgradeable;
@@ -17,10 +16,8 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
         maxSupplyEth = uint256(-1);
         maxUtilizationRate = uint256(-1);
     }
-
  
     uint256 public interestFeeRate;
-
 
     function _setInterestFeeRate(uint256 _interestFeeRate) external onlyOwner {
         require(_interestFeeRate <= 1e18, "Interest fee rate cannot be more than 100%.");

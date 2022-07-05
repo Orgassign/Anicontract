@@ -18,7 +18,7 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     }
  
     uint256 public interestFeeRate;
-
+    
     function _setInterestFeeRate(uint256 _interestFeeRate) external onlyOwner {
         require(_interestFeeRate <= 1e18, "Interest fee rate cannot be more than 100%.");
         interestFeeRate = _interestFeeRate;
@@ -42,7 +42,6 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     uint256 public minBorrowEth;
 
     uint256 public maxSupplyEth;
-
 
     uint256 public maxUtilizationRate;
 

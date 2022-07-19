@@ -40,7 +40,6 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     }
 
     uint256 public minBorrowEth;
-
     uint256 public maxSupplyEth;
 
     uint256 public maxUtilizationRate;

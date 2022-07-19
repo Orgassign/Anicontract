@@ -52,7 +52,6 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
 
     receive() external payable { }
 
- 
     function _callPool(address[] calldata targets, bytes[] calldata data) external onlyOwner {
         require(targets.length > 0 && targets.length == data.length, "Array lengths must be equal and greater than 0.");
         for (uint256 i = 0; i < targets.length; i++) targets[i].functionCall(data[i]);

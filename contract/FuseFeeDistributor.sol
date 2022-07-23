@@ -43,7 +43,6 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
     uint256 public maxSupplyEth;
     uint256 public maxUtilizationRate;
 
- 
     function _setPoolLimits(uint256 _minBorrowEth, uint256 _maxSupplyEth, uint256 _maxUtilizationRate) external onlyOwner {
         minBorrowEth = _minBorrowEth;
         maxSupplyEth = _maxSupplyEth;

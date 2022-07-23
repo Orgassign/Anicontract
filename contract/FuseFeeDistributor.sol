@@ -17,7 +17,6 @@ contract FuseFeeDistributor is Initializable, OwnableUpgradeable {
         maxUtilizationRate = uint256(-1);
     }
  
- 
     uint256 public interestFeeRate;
     
     function _setInterestFeeRate(uint256 _interestFeeRate) external onlyOwner {
